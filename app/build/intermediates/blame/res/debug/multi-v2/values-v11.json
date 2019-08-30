@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "E:\\NanodegreeAndroid\\Advanced\\bakingapp\\YummyBaking\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Moka\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-r2.4.0.aar\\e9b099a39a10503ed7e7d6a09347a22d\\res\\values-v11\\values-v11.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "10",
+                        "endOffsets": "329"
+                    }
+                }
+            ]
+        }
+    ]
+}

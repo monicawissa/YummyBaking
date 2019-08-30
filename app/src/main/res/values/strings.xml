@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">YummyBaking</string>
+    <string name="title_item_detail">Item Detail</string>
+    <string name="ingredients_title_text">Ingredients</string>
+    <string name="recipe">RECIPE</string>
+    <string name="there_is_no_attached_image_or_video">There is no attached image or video</string>
+    <string name="intro">intro</string>
+    <string name="recipe_name">recipe name</string>
+    <string name="quantity">quantity</string>
+    <string name="measure">measure</string>
+    <string name="ingredients">ingredient</string>
+    <string name="_1_10">1/10</string>
+    <string name="todo">TODO</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="ingredient_widget">ingredient_widget</string>
+    <string name="title">title</string>
+    <string name="widget">white</string>
+    <string name="add_to_shopping">add to shopping</string>
+
+</resources>

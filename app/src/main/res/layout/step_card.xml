@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    cardCornerRadius="10dp"
+    android:clickable="true"
+    android:id="@+id/root"
+    android:focusable="true">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/recipe_name"
+            android:textSize="22sp"
+            android:textColor="@color/recipe_list_background"
+            android:gravity="start|center"
+            android:padding="30dp"
+            />
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:paddingEnd="20dp"
+            android:layout_gravity="end|center"
+            android:src="@drawable/img_yt_logo"
+            android:paddingRight="20dp" />
+
+
+</android.support.v7.widget.CardView>

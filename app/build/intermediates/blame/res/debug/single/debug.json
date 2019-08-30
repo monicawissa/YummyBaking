@@ -368,16 +368,16 @@
         "source": "C:\\Users\\Moka\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\ce134973eb91b1166339dfc310d5d0cf\\res\\drawable-xhdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
     },
     {
-        "merged": "E:\\NanodegreeAndroid\\Advanced\\bakingapp\\YummyBaking\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_exo_controls_rewind.png.flat",
-        "source": "C:\\Users\\Moka\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-r2.4.0.aar\\e9b099a39a10503ed7e7d6a09347a22d\\res\\drawable-xhdpi-v4\\exo_controls_rewind.png"
+        "merged": "E:\\NanodegreeAndroid\\Advanced\\bakingapp\\YummyBaking\\app\\build\\intermediates\\res\\merged\\debug\\menu_recipe_details_menu.xml.flat",
+        "source": "E:\\NanodegreeAndroid\\Advanced\\bakingapp\\YummyBaking\\app\\src\\main\\res\\menu\\recipe_details_menu.xml"
     },
     {
         "merged": "E:\\NanodegreeAndroid\\Advanced\\bakingapp\\YummyBaking\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_exo_controls_pause.xml.flat",
         "source": "C:\\Users\\Moka\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-r2.4.0.aar\\e9b099a39a10503ed7e7d6a09347a22d\\res\\drawable-anydpi-v21\\exo_controls_pause.xml"
     },
     {
-        "merged": "E:\\NanodegreeAndroid\\Advanced\\bakingapp\\YummyBaking\\app\\build\\intermediates\\res\\merged\\debug\\menu_recipe_details_menu.xml.flat",
-        "source": "E:\\NanodegreeAndroid\\Advanced\\bakingapp\\YummyBaking\\app\\src\\main\\res\\menu\\recipe_details_menu.xml"
+        "merged": "E:\\NanodegreeAndroid\\Advanced\\bakingapp\\YummyBaking\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_exo_controls_rewind.png.flat",
+        "source": "C:\\Users\\Moka\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-r2.4.0.aar\\e9b099a39a10503ed7e7d6a09347a22d\\res\\drawable-xhdpi-v4\\exo_controls_rewind.png"
     },
     {
         "merged": "E:\\NanodegreeAndroid\\Advanced\\bakingapp\\YummyBaking\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_black_48dp.png.flat",
@@ -1984,12 +1984,12 @@
         "source": "C:\\Users\\Moka\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\e04b80c3dc20dddc3818632ab942c54d\\res\\color\\design_tint_password_toggle.xml"
     },
     {
-        "merged": "E:\\NanodegreeAndroid\\Advanced\\bakingapp\\YummyBaking\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4_exo_controls_fastforward.png.flat",
-        "source": "C:\\Users\\Moka\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-r2.4.0.aar\\e9b099a39a10503ed7e7d6a09347a22d\\res\\drawable-ldpi-v4\\exo_controls_fastforward.png"
-    },
-    {
         "merged": "E:\\NanodegreeAndroid\\Advanced\\bakingapp\\YummyBaking\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_img_yt_logo.png.flat",
         "source": "E:\\NanodegreeAndroid\\Advanced\\bakingapp\\YummyBaking\\app\\src\\main\\res\\drawable-v24\\img_yt_logo.png"
+    },
+    {
+        "merged": "E:\\NanodegreeAndroid\\Advanced\\bakingapp\\YummyBaking\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4_exo_controls_fastforward.png.flat",
+        "source": "C:\\Users\\Moka\\.gradle\\caches\\transforms-1\\files-1.1\\exoplayer-ui-r2.4.0.aar\\e9b099a39a10503ed7e7d6a09347a22d\\res\\drawable-ldpi-v4\\exo_controls_fastforward.png"
     },
     {
         "merged": "E:\\NanodegreeAndroid\\Advanced\\bakingapp\\YummyBaking\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_textfield_default_mtrl_alpha.9.png.flat",
