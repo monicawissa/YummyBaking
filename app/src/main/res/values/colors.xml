@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#46e9d8</color>
+    <color name="colorPrimaryDark">#97f2e5</color>
+    <color name="colorAccent">#f990b6</color>
+    <color name="recipe_list_background">#cccccc</color>
+    <color name="white">#fff</color>
+    <color name="black">#333232</color>
+</resources>

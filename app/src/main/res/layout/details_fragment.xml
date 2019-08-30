@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/recipe_list_background"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ingredients_title_text"
+        android:gravity="center"
+        android:textColor="#333333"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_margin="8dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/ingredientList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/bbbb"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_to_shopping"
+        android:textColor="@color/white"
+        android:background="@color/colorPrimary"
+        android:padding="30dp"
+        android:layout_gravity="center"/>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/stepsList"
+        android:clipToPadding="false"
+        />
+
+
+
+</LinearLayout>
