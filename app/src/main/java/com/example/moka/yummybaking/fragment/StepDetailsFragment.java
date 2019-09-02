@@ -50,7 +50,7 @@ import static android.view.View.GONE;
 
 
 public class StepDetailsFragment extends android.app.Fragment implements View.OnClickListener {
-
+    Boolean clicked=false;
     @BindView(R.id.root)
     LinearLayout layout;
     @BindView(R.id.f1)
@@ -182,12 +182,18 @@ public class StepDetailsFragment extends android.app.Fragment implements View.On
     }
 
     private void releasePlayer() {
-        if (player != null) {
+        if (player != null&&!clicked) {
             StartPosition=player.getCurrentPosition();
             StartAutoPlay=player.getPlayWhenReady();
             Log.d("Taag","on release state of player"+StartAutoPlay+"   position "+StartPosition);
             player.release();
             player = null;
+        }
+        else if(player != null){
+
+            player.release();
+            player = null;
+            clicked=false;
         }
     }
 
@@ -227,11 +233,15 @@ public class StepDetailsFragment extends android.app.Fragment implements View.On
             if(currentIndex ==0)
                 return;
             currentIndex--;
+            StartPosition=0;
+            clicked=true;
             show();
         } else if (id == R.id.next_button) {
             if(currentIndex==steps.size()-1)
                 return;
             currentIndex++;
+            StartPosition=0;
+            clicked=true;
             show();
         }
     }
