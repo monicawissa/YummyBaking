@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -19,6 +20,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import com.google.android.exoplayer2.C;
 import android.widget.Toast;
 
 import com.example.moka.yummybaking.FragmentOneListener;
@@ -78,7 +80,8 @@ public class StepDetailsFragment extends android.app.Fragment implements View.On
     int currentIndex;
     SimpleExoPlayer player;
     Boolean tablet;
-
+    long StartPosition=0;
+    Boolean StartAutoPlay=true;
     int width = 0;
     int height = 0;
 
@@ -95,12 +98,17 @@ public class StepDetailsFragment extends android.app.Fragment implements View.On
             steps = bundle.getParcelableArrayList("steps");
             currentIndex = bundle.getInt("current");
             tablet = bundle.getBoolean("tablet");
+            StartPosition=0;
+            StartAutoPlay=true;
         }
         else
         {
             steps = savedInstanceState.getParcelableArrayList("steps");
             currentIndex = savedInstanceState.getInt("index");
+            StartPosition=savedInstanceState.getLong("StartPosition",0);
+            StartAutoPlay=savedInstanceState.getBoolean("StartAutoPlay",true);
             tablet = savedInstanceState.getBoolean("tablet");
+
         }
         show();
 
@@ -134,11 +142,12 @@ public class StepDetailsFragment extends android.app.Fragment implements View.On
             imageView.setVisibility(GONE);
             empty.setVisibility(View.VISIBLE);
         } else if (!steps.get(currentIndex).getVideoURL().isEmpty()) {
-            String videoUrl = steps.get(currentIndex).getVideoURL();
             empty.setVisibility(View.GONE);
             imageView.setVisibility(GONE);
             playerView.setVisibility(View.VISIBLE);
+            String videoUrl = steps.get(currentIndex).getVideoURL();
             initializePlayer(Uri.parse(videoUrl));
+
 
         } else{
             String imageUrl = steps.get(currentIndex).getThumbnailURL();
@@ -162,15 +171,21 @@ public class StepDetailsFragment extends android.app.Fragment implements View.On
             player = ExoPlayerFactory.newSimpleInstance(
                     new DefaultRenderersFactory(getActivity()),
                     new DefaultTrackSelector(), new DefaultLoadControl());
-            playerView.setPlayer(player);
-            player.setPlayWhenReady(true);
             MediaSource mediaSource = buildMediaSource(uri);
             player.prepare(mediaSource, true, false);
+            playerView.setPlayer(player);
+            player.setPlayWhenReady(StartAutoPlay);
+            player.seekTo(StartPosition);
+
+            Log.d("Taag","on init state of player"+StartAutoPlay+"   position "+StartPosition);
         }
     }
 
     private void releasePlayer() {
         if (player != null) {
+            StartPosition=player.getCurrentPosition();
+            StartAutoPlay=player.getPlayWhenReady();
+            Log.d("Taag","on release state of player"+StartAutoPlay+"   position "+StartPosition);
             player.release();
             player = null;
         }
@@ -250,19 +265,26 @@ public class StepDetailsFragment extends android.app.Fragment implements View.On
     @Override
     public void onResume() {
         super.onResume();
+        if ((Util.SDK_INT <= 23 || player == null)) {
+            String videoUrl = steps.get(currentIndex).getVideoURL();
+            initializePlayer(Uri.parse(videoUrl));
+        }
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        if (Util.SDK_INT <= 23) {
+        if (Util.SDK_INT <= 23&&player!=null) {
+            Log.d("Taag","on stop ");
             releasePlayer();
+
         }
     }
 
     @Override
     public void onStop() {
         super.onStop();
+        Log.d("Taag","on stop ");
         if (Util.SDK_INT > 23) {
             releasePlayer();
         }
@@ -299,10 +321,19 @@ public class StepDetailsFragment extends android.app.Fragment implements View.On
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
+
         super.onSaveInstanceState(outState);
         outState.putInt("index",currentIndex);
         outState.putParcelableArrayList("steps",steps);
         outState.putBoolean("tablet",tablet);
+        //if(player!=null){
+        //StartAutoPlay=player.getPlayWhenReady();
+        outState.putBoolean("StartAutoPlay",StartAutoPlay);
+        //StartPosition =Math.max(0, player.getCurrentPosition());
+        outState.putLong("StartPosition", StartPosition );
+        Log.d("Taag","on saveinstance state of player"+StartAutoPlay+"   position "+StartPosition);
+
+        //}
     }
 
 

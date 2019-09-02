@@ -1,0 +1,4 @@
+#Mon Sep 02 16:51:30 GMT+02:00 2019
+base.0=E\:\\NanodegreeAndroid\\Advanced\\bakingapp\\YummyBaking\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\9
+path.0=classes.dex
+renamed.0=classes.dex
