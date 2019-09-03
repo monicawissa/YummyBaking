@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(View view, int position) {
                 Intent details=new Intent(MainActivity.this,activity_recipe_details.class);
-
                 Bundle bundle=new Bundle();
                 bundle.putParcelableArrayList("steps",
                         (ArrayList<? extends Parcelable>) baking.get(position).getSteps());
